@@ -12,7 +12,21 @@ public class IntArrayWorker
     matrix = theMatrix;
   }
  
-  
+  public int getLargest()
+  {
+	  int largest = Integer.MIN_VALUE;
+	  for (int row=0; row<matrix.length; row++)
+	  {
+		  for (int col =0; col<matrix[0].length;col++)
+		  {
+			  if(largest<matrix[row][col])
+			  {
+				  largest=matrix[row][col];
+			  }
+		  }
+	  }
+	  return largest;
+  }
   public int getCount(int numberToFind)
   {
 	  int count = 0;
